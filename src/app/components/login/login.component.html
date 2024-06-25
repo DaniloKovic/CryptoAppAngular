@@ -1,0 +1,28 @@
+<div class="login-container">
+  <mat-card>
+    <mat-card-header >
+      <mat-card-title >Login</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <!-- <div class="input-param">
+          <mat-label>Digital Certificate</mat-label>
+          <input type="file" (change)="onFileSelected($event)" required>
+        </div> -->
+        <mat-form-field class="input-param" appearance="fill">
+          <mat-label>Digital Certificate Path</mat-label>
+          <input matInput formControlName="certificatePath" placeholder="Enter certificate path" required>
+        </mat-form-field>
+        <mat-form-field class="input-param" appearance="fill">
+          <mat-label>Username</mat-label>
+          <input matInput formControlName="username" placeholder="Enter username" required>
+        </mat-form-field>
+        <mat-form-field class="input-param" appearance="fill">
+          <mat-label>Password</mat-label>
+          <input matInput type="password" formControlName="password" placeholder="Enter password" required>
+        </mat-form-field>
+        <button mat-raised-button class="login-button" type="submit">Log In</button>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>

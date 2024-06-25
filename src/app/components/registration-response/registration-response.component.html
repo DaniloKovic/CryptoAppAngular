@@ -1,0 +1,16 @@
+<!-- registration-result/registration-result.component.html -->
+
+<!-- registration-response.component.html -->
+<div *ngIf="registrationResponse">
+    <mat-card class="response-card">
+        <mat-card-header>
+            <mat-card-title>Registration Successful</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <p><strong>Digital Certificate Path:</strong> {{ registrationResponse.digitalCertificateFilePath }}</p>
+            <p><strong>Private Key Path:</strong> {{ registrationResponse.privateKeyFilePath }}</p>
+            <p><strong>Public Key Path:</strong> {{ registrationResponse.publicKeyFilePath }}</p>
+            <button mat-button (click)="navigateToLogin()">LogIn</button>
+        </mat-card-content>
+    </mat-card>
+</div>
